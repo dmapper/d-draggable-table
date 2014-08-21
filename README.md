@@ -11,7 +11,7 @@ app.component require('./d-draggable-table/d-draggable-table')
 
 ### Styles
 ```coffee
-@import ../components/d-draggable-table/d-draggable-table.styl
+@import ../components/d-draggable-table/d-draggable-table.sass
 ```
 
 ### Data format
