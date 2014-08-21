@@ -1,5 +1,6 @@
 d-draggable-table
 =================
+Derby draggable table component. Based on derby sink.
 
 ## Usage
 
