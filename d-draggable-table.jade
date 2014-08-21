@@ -4,31 +4,10 @@ index:
     tbody
       tr
         td
-        th(on-mousedown="sortable.onColDown($event)", class="col") 1
-        th(on-mousedown="sortable.onColDown($event)", class="col") 2
-        th(on-mousedown="sortable.onColDown($event)", class="col") 3
-        th(on-mousedown="sortable.onColDown($event)", class="col") 4
-      tr(class="row")
-        th(on-mousedown="sortable.onRowDown($event)") 5
-        td hello
-        td hello
-        td hello
-        td hello
-      tr(class="row")
-        th(on-mousedown="sortable.onRowDown($event)") 6
-        td world
-        td world
-        td world
-        td world
-      tr(class="row")
-        th(on-mousedown="sortable.onRowDown($event)") 7
-        td hey
-        td hey
-        td hey
-        td hey
-      tr(class="row")
-        th(on-mousedown="sortable.onRowDown($event)") 8
-        td ho
-        td ho
-        td ho
-        td ho
+        each headers as #header, #i
+          th(class="col") {{#header}}
+      each table as #row, #i
+        tr(class="row")
+          th(on-mousedown="sortable.onRowDown($event)") {{#i+1}}
+          each #row.cells as #cell
+            td {{#cell}}
