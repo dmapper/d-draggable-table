@@ -43,8 +43,9 @@ module.exports = class DraggableTable
     if @model.get('sortBy') is field
       @model.set 'desc', !@model.get('desc')
     else
-      @model.set 'desc', true
+      @model.set 'desc', false
     sorter = new StringSorter(bubbleSort)
     sorter.sort(table, field, @model)
     table.reverse() if @model.get("desc")
+    @model.set 'table', table
     @model.set 'sortBy', field
