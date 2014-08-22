@@ -47,5 +47,5 @@ module.exports = class DraggableTable
     sorter = new StringSorter(bubbleSort)
     sorter.sort(table, field, @model)
     table.reverse() if @model.get("desc")
-    @model.set 'table', table
     @model.set 'sortBy', field
+    @model.set 'refresh', !@model.get('refresh')
