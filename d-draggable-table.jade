@@ -5,9 +5,13 @@ index:
       tr
         td
         each headers as #header, #i
-          th(class="col") {{#header}}
+          view(name='sortable-header', header='{{#header}}', field='{{#i}}')
       each table as #row, #i
         tr(class="row")
           th(on-mousedown="sortable.onRowDown($event)") {{#i+1}}
           each #row.cells as #cell
             td {{#cell}}
+
+sortable-header:
+  th.column-header(class="{{if sortBy === @field}}-sort{{/}} {{if desc}}-desc{{else}}-asc{{/}}", on-click="sort(@field)")
+    ._sort-indicator {{@header}}
