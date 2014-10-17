@@ -31,7 +31,7 @@ module.exports = class DraggableTable
   init: ->
 
   create: ->
-    @data = @model.get('data') || defaultData
+    @data = @model.get('table') || defaultData
     @headers = @model.get('headers') || [1..@data[0].cells.length]
     @model.set('table', @data)
     @model.set('headers', @headers)
@@ -43,7 +43,6 @@ module.exports = class DraggableTable
 
   sort: (field) ->
     field = field|0
-    console.log field
     table = @model.get 'table'
     if @model.get('sortBy') is field
       @model.set 'desc', !@model.get('desc')
