@@ -1,5 +1,11 @@
 _ = require 'lodash'
 
+defaultData = [
+    { cells: [1, 'a', '2', 'helo', '1'] },
+    { cells: [3, 'b', '1', 'world', '3'] },
+    { cells: [2, 'd', '3', 'test', 'a'] },
+    { cells: [4, 'c', '4', 'string', 'c'] }
+  ]
 
 bubbleSort = (list, field, model) ->
     anySwaps = false
@@ -23,15 +29,12 @@ module.exports = class DraggableTable
   style: __dirname
 
   init: ->
-    defaultData = [ { cells: [1, 'a', '2', 'helo', '1'] },
-      { cells: [3, 'b', '1', 'world', '3'] },
-      { cells: [2, 'd', '3', 'test', 'a'] },
-      { cells: [4, 'c', '4', 'string', 'c'] } ]
-    @model.setNull('table', defaultData)
-    @model.setNull('headers', [1..@model.get('table')[0].cells.length])
 
   create: ->
-    console.log(@model.get('table'))
+    @data = @model.get('data') || defaultData
+    @headers = @model.get('headers') || [1..@data[0].cells.length]
+    @model.set('table', @data)
+    @model.set('headers', @headers)
 
   onRowMove: (from, to) ->
     @model.move('table', from, to)
