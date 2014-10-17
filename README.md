@@ -4,15 +4,20 @@ Derby draggable table component. Based on derby sink.
 
 ## Usage
 
+#### Install
+```
+npm install d-grouped-barchart
+```
+
 ### App index
 ```coffee
 app.component require('./d-draggable-table/components/sortable-table')
-app.component require('./d-draggable-table/d-draggable-table')
+app.component require('./d-draggable-table')
 ```
 
 ### Styles
 ```coffee
-@import ../components/d-draggable-table/d-draggable-table.sass
+@import ../components/d-draggable-table/index.sass
 ```
 
 ### Data format
