@@ -19,7 +19,9 @@ StringSorter = (algorithm) ->
   sort: (list, field, model) -> algorithm list, field, model
 
 module.exports = class DraggableTable
-  view: __filename.replace /\..+$/, ''
+  view: __dirname
+  style: __dirname
+
   init: ->
     defaultData = [ { cells: [1, 'a', '2', 'helo', '1'] },
       { cells: [3, 'b', '1', 'world', '3'] },
