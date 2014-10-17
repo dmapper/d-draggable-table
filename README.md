@@ -18,11 +18,12 @@ app.component require('./d-draggable-table/d-draggable-table')
 ### Data format
 ```coffee
 defaultData = [ 
-  { cells: ['hello', 'hello', 'hello', 'hello', 'hello'] },
-  { cells: ['world', 'world', 'world', 'world', 'world'] },
-  { cells: ['hey', 'hey', 'hey', 'hey', 'hey'] },
-  { cells: ['ho', 'ho', 'ho', 'ho', 'ho'] } 
+  { cells: [1, 'a', '2', 'helo',   '1'] },
+  { cells: [3, 'b', '1', 'world',  '3'] },
+  { cells: [2, 'd', '3', 'test',   'a'] },
+  { cells: [4, 'c', '4', 'string', 'c'] } 
 ]
+
 ```
 
 ### WIthin template
