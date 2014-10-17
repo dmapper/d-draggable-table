@@ -6,7 +6,7 @@ Derby draggable table component. Based on derby sink.
 
 #### Install
 ```
-npm install d-grouped-barchart
+npm install d-draggable-table
 ```
 
 ### App index
