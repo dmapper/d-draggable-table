@@ -1,0 +1,37 @@
+$color-main: #888
+
+table
+  user-select: none
+th
+  cursor: move
+  padding: 0 4px
+
+.row
+  display: table-row !important
+
+.column-header
+  cursor: pointer
+  line-height: 40px
+  ._sort-indicator
+    width: 12px
+    text-align: center
+  &.-sort
+    ._sort-indicator
+      position: relative
+      &:before
+        content: ''
+        width: 0
+        height: 0
+        border: 5px solid transparent
+        position: absolute
+        left: 1px
+    &:not(.-desc)
+      ._sort-indicator
+        &:before
+          top: -2px
+          border-bottom-color: $color-main
+    &.-desc
+      ._sort-indicator
+        &:before
+          bottom: -2px
+          border-top-color: $color-main

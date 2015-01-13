@@ -1,0 +1,37 @@
+table {
+    user-select: none;
+}
+th {
+    cursor: move;
+    padding: 0 4px;
+}
+.row {
+    display: table-row !important;
+}
+.column-header {
+    cursor: pointer;
+    line-height: 40px;
+}
+.column-header ._sort-indicator {
+    width: 12px;
+    text-align: center;
+}
+.column-header.-sort ._sort-indicator {
+    position: relative;
+}
+.column-header.-sort ._sort-indicator:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    position: absolute;
+    left: 1px;
+}
+.column-header.-sort:not(.-desc) ._sort-indicator:before {
+    top: -2px;
+    border-bottom-color: #888;
+}
+.column-header.-sort.-desc ._sort-indicator:before {
+    bottom: -2px;
+    border-top-color: #888;
+}

@@ -10,15 +10,15 @@ defaultData = [
 bubbleSort = (list, field, model) ->
     anySwaps = false
     swapPass = ->
-        for r in [0..list.length-2]
-            if list[r].cells[field] > list[r+1].cells[field]
-                anySwaps = true
-                model.move('table', r, r+1)
+      for r in [0..list.length-2]
+        if list[r].cells[field] > list[r+1].cells[field]
+          anySwaps = true
+          model.move('table', r, r+1)
 
     swapPass()
     while anySwaps
-        anySwaps = false
-        swapPass()
+      anySwaps = false
+      swapPass()
     list
 
 StringSorter = (algorithm) ->
@@ -26,7 +26,6 @@ StringSorter = (algorithm) ->
 
 module.exports = class DraggableTable
   view: __dirname
-  style: __dirname
 
   init: ->
 
