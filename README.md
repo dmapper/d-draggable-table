@@ -11,13 +11,13 @@ npm install d-draggable-table
 
 ### App index
 ```coffee
-app.component require('./d-draggable-table/components/sortable-table')
-app.component require('./d-draggable-table')
+app.component require('d-draggable-table/components/sortable-table')
+app.component require('d-draggable-table')
 ```
 
 ### Styles
 ```coffee
-@import ../components/d-draggable-table/index.sass
+@import 'node_modules/d-draggable-table/styles/index'
 ```
 
 ### Data format
