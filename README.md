@@ -2,6 +2,10 @@ d-draggable-table
 =================
 Derby draggable table component. Based on derby sink.
 
+## Features
+* Rows sorting using drag&drop
+* Sorting rows by any column
+
 ## Usage
 
 #### Install
@@ -40,3 +44,6 @@ You can pass table and headers data parameters to the component as follows:
 ```jade
 view(name='d-draggable-table', table='{{_page.data}}', headers='{{_page.headers}}')
 ```
+
+## Gallery
+![Alt text](/screenshots/d-draggable-demo.png?raw=true "d-draggable-table demo")
